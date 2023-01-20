@@ -32,4 +32,3 @@ router
 
 module.exports = router;
 
-// Set up DELETE at /api/thoughts/:thoughtId/reactions/:reactionId

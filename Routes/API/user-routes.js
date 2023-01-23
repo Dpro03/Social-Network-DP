@@ -9,7 +9,7 @@ const {
     deleteUser,
     addFriend,
     deleteFriend
-} = require('../../controllers/user-controller');
+} = require('../../Controllers/user-controller');
 
 // Set up GET all and POST at /api/users
 router

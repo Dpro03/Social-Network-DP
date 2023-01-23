@@ -1,3 +1,5 @@
+const updateUser = require ('./user-controller');
+
 const {
     Thought,
     User
@@ -65,9 +67,9 @@ const userController = {
         User.create(body)
             .then(dbUserData => res.json(dbUserData))
             .catch(err => res.status(400).json(err));
-    }
+    },
 
-    // update user by id
+    //update user by id
     updateUser({
         params,
         body
@@ -85,7 +87,7 @@ const userController = {
             .catch(err => res.status(400).json(err));
     },
 
-    // delete user
+    //delete user
     deleteUser({
         params
     }, res) {
@@ -120,7 +122,7 @@ const userController = {
                     return;
                 }
                 res.json(dbUserData);
-            }
+            })
             .catch(err => res.status(400).json(err));
     },
 

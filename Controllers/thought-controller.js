@@ -1,3 +1,4 @@
+
 const {
     Thought,
     User
@@ -7,6 +8,10 @@ const thoughtController = {
     // get all thoughts
     getAllThoughts(req, res) {
         Thought.find({})
+        .populate({
+            path: 'reactions',
+            select: '-__v'
+            })
             .select('-__v')
             .sort({
                 _id: -1
@@ -51,8 +56,8 @@ const thoughtController = {
                 return User.findOneAndUpdate({
                     _id: body.userId
                 }, {
-                    $addtoSet: {
-                        thoughts: ThoughtData._id
+                    $push: {
+                        thoughts: dbThoughtData._id
                     }
                 }, {
                     new: true
@@ -69,10 +74,9 @@ const thoughtController = {
                 }
                 res.json(dbUserData);
             })
-            .catch(err => res.json(err));
-                console.log(err);
-                res.status(400).json(err);
-
+            .catch(err => {
+                console.log(err)
+                res.json(err)});
     },
 
     // update thought by id

@@ -1,5 +1,6 @@
 const { Schema, model, Types } = require("mongoose");
 const moment = require("moment");
+const router = require("express").Router();
 
 const UserSchema = new Schema(
   {
@@ -43,4 +44,4 @@ UserSchema.virtual("friendCount").get(function () {
 
 const User = model("User", UserSchema);
 
-module.exports = User;
+module.exports = User, UserSchema;

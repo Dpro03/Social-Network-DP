@@ -32,6 +32,7 @@ const userController = {
     getUserById({
         params
     }, res) {
+        console.log(params)
         User.findOne({
                 _id: params.id
             })
@@ -74,7 +75,7 @@ const userController = {
         params,
         body
     }, res) {
-        User.findOneAndUpdate({ _id: params }, body, { new: true, runValidators: true })
+        User.findOneAndUpdate({ _id: params.id }, body, { new: true, runValidators: true })
             .then(dbUserData => {
                 if (!dbUserData) {
                     res.status(404).json({
@@ -109,6 +110,8 @@ const userController = {
     addFriend({
         params
     }, res) {
+        console.log(params)
+ 
         User.findOneAndUpdate(
                 { _id: params.userId },
                 { $push: { friends: params.friendId } },
@@ -159,7 +162,6 @@ const userController = {
 
 
        
-
 
 
 

@@ -177,6 +177,7 @@ const thoughtController = {
       .catch((err) => res.json(err));
   },
 
+
   // delete reaction
   deleteReaction({ params }, res) {
     Thought.findOneAndUpdate(

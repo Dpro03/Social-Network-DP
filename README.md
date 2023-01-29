@@ -10,13 +10,14 @@
   - [Acceptance Criteria](#acceptance-criteria)
   - [Testing](#testing)
   - [Installation](#installation)
-  - [Walkthrough Video:](#walkthrough-video)
-  - [Submission:](#submission)
-  - [Questions:](#questions)
+  - [Walkthrough Video](#walkthrough-video)
+  - [Submission](#submission)
+  - [Author](#author)
+  - [Questions](#questions)
 
 ## Description
 
-This is an API for a social network web application where a user can join with a username and email address.  When the user joins, they can become friends with other members and also share their thoughts and/or reactions to those thoughts with other members.  It employs a MongoDB database for the data, Express.js for routing, and moment to format time stamps.
+This is an API for a social network application where a user can join with a username and email address.  When the user joins, they can become friends with other members and also share their thoughts and/or reactions to those thoughts with other members.  It employs a MongoDB database for the data, Express.js for routing, and moment to format time stamps.
 
 
 ## User Story
@@ -62,15 +63,19 @@ You must have node.js, express.js, mongoDB installed and have either mongo compa
 
  `-npm start`  
  
-## Walkthrough Video:
+## Walkthrough Video
 
-Placeholder
+[Walk-through video link](https://drive.google.com/file/d/1BeiVMRHMWhUo1oVZi4lY3CXP47G3JSEZ/view)
 
-## Submission:
+## Submission
 
-Github Repo: https://github.com/Dpro03/Social-Network-DP.git
+[Github Repo](https://github.com/Dpro03/Social-Network-DP.git)
 
-## Questions:
+## Author
+
+David Proto<br>
+[My Github Page](https://github.com/Dpro03)
+## Questions
 
 Email me at:
 dpro308@gmail.com
